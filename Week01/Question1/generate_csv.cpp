@@ -3,6 +3,7 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include <string> // Include this header for std::stoi
 
 /**
  * Generates a CSV file with random temperature data.

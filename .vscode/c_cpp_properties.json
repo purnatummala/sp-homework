@@ -3,13 +3,22 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/<version>/include",
+                "C:/Program Files (x86)/Windows Kits/10/Include/<version>/ucrt",
+                "C:/Program Files (x86)/Windows Kits/10/Include/<version>/shared",
+                "C:/Program Files (x86)/Windows Kits/10/Include/<version>/um",
+                "C:/Program Files (x86)/Windows Kits/10/Include/<version>/winrt"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
-            ]
+            ],
+            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/<version>/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
         }
     ],
     "version": 4

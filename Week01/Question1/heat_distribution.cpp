@@ -6,9 +6,9 @@
 #include <cmath>
 
 // Function to parse command-line arguments
-bool parseArguments(int argc, char* argv[], int& N, float& a, float& b, float& dt, int& timeSteps, std::string& outputFile) {
-    if (argc != 7) {
-        std::cerr << "Usage: " << argv[0] << " <grid size N> <a> <b> <time step dt> <number of time steps> <output file>\n";
+bool parseArguments(int argc, char* argv[], int& N, float& a, float& b, float& dt, int& timeSteps, std::string& inputFile, std::string& outputFile) {
+    if (argc != 8) {
+        std::cerr << "Usage: " << argv[0] << " <grid size N> <a> <b> <time step dt> <number of time steps> <input file> <output file>\n";
         return false;
     }
     std::stringstream ss;
@@ -52,8 +52,15 @@ bool parseArguments(int argc, char* argv[], int& N, float& a, float& b, float& d
         return false;
     }
     
+    // Parse input file
+    inputFile = argv[6];
+    if (inputFile.empty()) {
+        std::cerr << "Error: Input file name cannot be empty.\n";
+        return false;
+    }
+    
     // Parse output file
-    outputFile = argv[6];
+    outputFile = argv[7];
     if (outputFile.empty()) {
         std::cerr << "Error: Output file name cannot be empty.\n";
         return false;
@@ -62,14 +69,18 @@ bool parseArguments(int argc, char* argv[], int& N, float& a, float& b, float& d
     return true;
 }
 
-// Function to initialize the grid with T = 1 - x^2
-std::vector<float> initializeGrid(int N, float a, float b) {
+// Function to read the initial temperature distribution from a file
+std::vector<float> readInitialTemperature(const std::string& inputFile, int N) {
     std::vector<float> grid(N);
-    float dx = (b - a) / (N - 1);
-    for (int i = 0; i < N; ++i) {
-        float x = a + i * dx;
-        grid[i] = 1.0f - x * x;
+    std::ifstream inFile(inputFile);
+    if (!inFile) {
+        std::cerr << "Error opening input file: " << inputFile << "\n";
+        return grid;
     }
+    for (int i = 0; i < N; ++i) {
+        inFile >> grid[i];
+    }
+    inFile.close();
     return grid;
 }
 
@@ -77,9 +88,20 @@ std::vector<float> initializeGrid(int N, float a, float b) {
 void timeStepHeatDistribution(std::vector<float>& grid, float dt, int timeSteps, float dx) {
     std::vector<float> newGrid = grid;
     float alpha = dt / (dx * dx); // Thermal diffusivity coefficient
+
+    // Stability check
+    if (alpha > 0.5) {
+        std::cerr << "Error: The time step dt is too large for stability. Reduce dt or increase dx.\n";
+        return;
+    }
+
     for (int t = 0; t < timeSteps; ++t) {
         for (size_t i = 1; i < grid.size() - 1; ++i) {
             newGrid[i] = grid[i] + alpha * (grid[i - 1] - 2 * grid[i] + grid[i + 1]);
+            if (std::isnan(newGrid[i])) {
+                std::cerr << "NaN detected at time step " << t << ", index " << i << "\n";
+                return;
+            }
         }
         grid = newGrid;
     }
@@ -97,6 +119,9 @@ void writeGridToFile(const std::vector<float>& grid, float a, float b, const std
         float x = a + i * dx;
         outFile << x << " " << grid[i] << "\n";
     }
+    if (outFile.fail()) {
+        std::cerr << "Error writing to output file: " << outputFile << "\n";
+    }
     outFile.close();
 }
 
@@ -104,13 +129,13 @@ int main(int argc, char* argv[]) {
     int N;
     float a, b, dt;
     int timeSteps;
-    std::string outputFile;
+    std::string inputFile, outputFile;
 
-    if (!parseArguments(argc, argv, N, a, b, dt, timeSteps, outputFile)) {
+    if (!parseArguments(argc, argv, N, a, b, dt, timeSteps, inputFile, outputFile)) {
         return 1;
     }
 
-    std::vector<float> grid = initializeGrid(N, a, b);
+    std::vector<float> grid = readInitialTemperature(inputFile, N);
     float dx = (b - a) / (N - 1);
 
     // Perform time-stepping for heat distribution
