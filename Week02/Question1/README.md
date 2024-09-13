@@ -41,11 +41,11 @@ Below are the generated plots of the 2D and 3D particle trajectories:
 
 ### 2D Particle Trajectory
 
-![2D Particle Trajectory](images/trajectory_2D.png)
+![2D Particle Trajectory](images/trajectory_2d.png)
 
 ### 3D Particle Trajectory
 
-![3D Particle Trajectory](images/trajectory_3D.png)
+![3D Particle Trajectory](images/trajectory_3d.png)
 
 ## Compilation and Execution
 
