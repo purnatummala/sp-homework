@@ -1,7 +1,6 @@
 # Compiler and flags
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -Igoogletest/googletest/include
-LDFLAGS = -Lgoogletest/build/lib -lgtest -lgtest_main -pthread
+CXXFLAGS = -std=c++11 -Wall
 
 # Targets
 TARGET = main
@@ -15,27 +14,28 @@ TEST_SRCS = test_grid.cpp Grid1.cpp Grid2.cpp Grid3.cpp
 OBJS = $(SRCS:.cpp=.o)
 TEST_OBJS = $(TEST_SRCS:.cpp=.o)
 
-# Default target
-all: $(TARGET) $(TEST_TARGET)
-
-# Main target
+# Build main target
 $(TARGET): $(OBJS)
-    $(CXX) $(CXXFLAGS) -o $@ $^
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
-# Test target
+# Build test target
 $(TEST_TARGET): $(TEST_OBJS)
-    $(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
 # Compile source files
 %.o: %.cpp
-    $(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Clean up
 clean:
-    rm -f $(TARGET) $(TEST_TARGET) $(OBJS) $(TEST_OBJS)
+	rm -f $(TARGET) $(TEST_TARGET) $(OBJS) $(TEST_OBJS)
 
 # Run tests
 test: $(TEST_TARGET)
-    ./$(TEST_TARGET)
+	./$(TEST_TARGET)
 
-.PHONY: all clean test
+# Run main program
+run: $(TARGET)
+	./$(TARGET)
+
+.PHONY: all clean test run
