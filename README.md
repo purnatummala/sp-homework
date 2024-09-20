@@ -19,7 +19,8 @@ The program performs the following:
 - `grid3d_1d_array.h`: Header file for 3D grid implementation using a 1D array.
 - `grid3d_vector.h`: Header file for 3D grid implementation using a vector.
 - `grid3d_new.h`: Header file for an alternate 3D grid implementation.
-- `main.cpp`: Contains the main function and test cases for checking the functionality of different grid implementations.
+- `main.cpp`: Contains the main function
+- `test_grid.cpp`: contains test cases for checking the functionality of different grid implementations.
 
 ## How to Run
 
