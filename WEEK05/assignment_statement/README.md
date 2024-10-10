@@ -37,13 +37,13 @@ This histogram shows the distribution of edge lengths in the brain mesh.
 - **Mean edge length:** [Insert calculated mean edge length]
 - **Standard deviation:** [Insert calculated standard deviation]
 
-![Histogram of Edge Lengths](images/edge_length_histogram.png) 
+![Histogram of Edge Lengths](images/edge_lengths_histogram.png) 
 
 ### ii. Vertex Area Histogram
 
 This histogram displays the distribution of vertex areas calculated in the previous step.
 
-![Histogram of Vertex Areas](images/vertex_area_histogram.png)
+![Histogram of Vertex Areas](images/vertex_areas_histogram.png)
 
 ## 5. Makefile
 
