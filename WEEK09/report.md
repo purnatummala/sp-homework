@@ -114,13 +114,7 @@ To summarize and analyze the results from the benchmarking framework.
 3. **What insights can be drawn from using adaptive vs. non-adaptive methods in different interval configurations?**
    - Adaptive methods are well-suited for intervals where the integrand varies significantly. Non-adaptive methods are preferable for smooth functions or when execution time is a critical constraint.
 
-### Grading Evaluation Summary
-- **Correctness:** All methods were implemented correctly, and operator overloading for addition was tested with edge cases.
-- **Performance Measurement:** Benchmarks tracked execution time, function evaluations, and accuracy metrics effectively.
-- **Operator Overloading:** The `+` operator implementation was seamless, enabling practical chaining of integrations.
-- **Code Structure & OOP:** Code was modular, leveraging inheritance and polymorphism to enhance maintainability.
-- **Documentation & Clarity:** Thorough documentation was provided for all classes and methods.
-- **Analysis & Insight:** Benchmarking analysis highlighted trade-offs between accuracy, computational cost, and caching efficiency.
+
 
 ### Conclusion
 This project demonstrated the power of modern C++ techniques in numerical integration, combining adaptive and non-adaptive methods with efficient function evaluation and caching. The `Integration` class hierarchy provided a clean, polymorphic interface for different methods, and the overloaded addition operator made chaining integrals straightforward. Overall, this project provided an in-depth look into the computational aspects of numerical integration, the impact of caching, and the value of adaptive strategies in different scenarios.
