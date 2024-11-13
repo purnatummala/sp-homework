@@ -1,0 +1,360 @@
+Method Name: Trapezoidal Non-Adaptive Integration
+Function Name: sin(x)
+Cache Type: none
+Cache Enabled: false
+Numerical Result: 0.459698
+Absolute Error: 9.13337e-009
+Relative Error: 1.98682e-008
+Function Evaluations: 4096
+Execution Time (sec): 0.130916
+-----------------------------
+Method Name: Trapezoidal Non-Adaptive Integration
+Function Name: sin(x)
+Cache Type: slow
+Cache Enabled: true
+Numerical Result: 0.459698
+Absolute Error: 9.13337e-009
+Relative Error: 1.98682e-008
+Function Evaluations: 8192
+Execution Time (sec): 0.136524
+-----------------------------
+Method Name: Trapezoidal Non-Adaptive Integration
+Function Name: sin(x)
+Cache Type: fast
+Cache Enabled: true
+Numerical Result: 0.459698
+Absolute Error: 9.13337e-009
+Relative Error: 1.98682e-008
+Function Evaluations: 12288
+Execution Time (sec): 0.13979
+-----------------------------
+Method Name: Trapezoidal Adaptive Integration
+Function Name: sin(x)
+Cache Type: none
+Cache Enabled: false
+Numerical Result: 0
+Absolute Error: 0.459698
+Relative Error: 1
+Function Evaluations: 12288
+Execution Time (sec): 0
+-----------------------------
+Method Name: Trapezoidal Adaptive Integration
+Function Name: sin(x)
+Cache Type: slow
+Cache Enabled: true
+Numerical Result: 0
+Absolute Error: 0.459698
+Relative Error: 1
+Function Evaluations: 12288
+Execution Time (sec): 0
+-----------------------------
+Method Name: Trapezoidal Adaptive Integration
+Function Name: sin(x)
+Cache Type: fast
+Cache Enabled: true
+Numerical Result: 0
+Absolute Error: 0.459698
+Relative Error: 1
+Function Evaluations: 12288
+Execution Time (sec): 0
+-----------------------------
+Method Name: Simpson Non-Adaptive Integration
+Function Name: sin(x)
+Cache Type: none
+Cache Enabled: false
+Numerical Result: 0.459698
+Absolute Error: 9.13337e-009
+Relative Error: 1.98682e-008
+Function Evaluations: 16384
+Execution Time (sec): 0.143027
+-----------------------------
+Method Name: Simpson Non-Adaptive Integration
+Function Name: sin(x)
+Cache Type: slow
+Cache Enabled: true
+Numerical Result: 0.459698
+Absolute Error: 9.13337e-009
+Relative Error: 1.98682e-008
+Function Evaluations: 20480
+Execution Time (sec): 0.138126
+-----------------------------
+Method Name: Simpson Non-Adaptive Integration
+Function Name: sin(x)
+Cache Type: fast
+Cache Enabled: true
+Numerical Result: 0.459698
+Absolute Error: 9.13337e-009
+Relative Error: 1.98682e-008
+Function Evaluations: 24576
+Execution Time (sec): 0.137
+-----------------------------
+Method Name: Simpson Adaptive Integration
+Function Name: sin(x)
+Cache Type: none
+Cache Enabled: false
+Numerical Result: 0
+Absolute Error: 0.459698
+Relative Error: 1
+Function Evaluations: 24576
+Execution Time (sec): 0
+-----------------------------
+Method Name: Simpson Adaptive Integration
+Function Name: sin(x)
+Cache Type: slow
+Cache Enabled: true
+Numerical Result: 0
+Absolute Error: 0.459698
+Relative Error: 1
+Function Evaluations: 24576
+Execution Time (sec): 0
+-----------------------------
+Method Name: Simpson Adaptive Integration
+Function Name: sin(x)
+Cache Type: fast
+Cache Enabled: true
+Numerical Result: 0
+Absolute Error: 0.459698
+Relative Error: 1
+Function Evaluations: 24576
+Execution Time (sec): 0
+-----------------------------
+Method Name: Trapezoidal Non-Adaptive Integration
+Function Name: log(x)
+Cache Type: none
+Cache Enabled: false
+Numerical Result: -inf
+Absolute Error: inf
+Relative Error: inf
+Function Evaluations: 4096
+Execution Time (sec): 0.133445
+-----------------------------
+Method Name: Trapezoidal Non-Adaptive Integration
+Function Name: log(x)
+Cache Type: slow
+Cache Enabled: true
+Numerical Result: -inf
+Absolute Error: inf
+Relative Error: inf
+Function Evaluations: 8192
+Execution Time (sec): 0.158613
+-----------------------------
+Method Name: Trapezoidal Non-Adaptive Integration
+Function Name: log(x)
+Cache Type: fast
+Cache Enabled: true
+Numerical Result: -inf
+Absolute Error: inf
+Relative Error: inf
+Function Evaluations: 12288
+Execution Time (sec): 0.131741
+-----------------------------
+Method Name: Trapezoidal Adaptive Integration
+Function Name: log(x)
+Cache Type: none
+Cache Enabled: false
+Numerical Result: 0
+Absolute Error: 1
+Relative Error: 1
+Function Evaluations: 12288
+Execution Time (sec): 0
+-----------------------------
+Method Name: Trapezoidal Adaptive Integration
+Function Name: log(x)
+Cache Type: slow
+Cache Enabled: true
+Numerical Result: 0
+Absolute Error: 1
+Relative Error: 1
+Function Evaluations: 12288
+Execution Time (sec): 0
+-----------------------------
+Method Name: Trapezoidal Adaptive Integration
+Function Name: log(x)
+Cache Type: fast
+Cache Enabled: true
+Numerical Result: 0
+Absolute Error: 1
+Relative Error: 1
+Function Evaluations: 12288
+Execution Time (sec): 0
+-----------------------------
+Method Name: Simpson Non-Adaptive Integration
+Function Name: log(x)
+Cache Type: none
+Cache Enabled: false
+Numerical Result: -inf
+Absolute Error: inf
+Relative Error: inf
+Function Evaluations: 16384
+Execution Time (sec): 0.136181
+-----------------------------
+Method Name: Simpson Non-Adaptive Integration
+Function Name: log(x)
+Cache Type: slow
+Cache Enabled: true
+Numerical Result: -inf
+Absolute Error: inf
+Relative Error: inf
+Function Evaluations: 20480
+Execution Time (sec): 0.140216
+-----------------------------
+Method Name: Simpson Non-Adaptive Integration
+Function Name: log(x)
+Cache Type: fast
+Cache Enabled: true
+Numerical Result: -inf
+Absolute Error: inf
+Relative Error: inf
+Function Evaluations: 24576
+Execution Time (sec): 0.143184
+-----------------------------
+Method Name: Simpson Adaptive Integration
+Function Name: log(x)
+Cache Type: none
+Cache Enabled: false
+Numerical Result: 0
+Absolute Error: 1
+Relative Error: 1
+Function Evaluations: 24576
+Execution Time (sec): 0
+-----------------------------
+Method Name: Simpson Adaptive Integration
+Function Name: log(x)
+Cache Type: slow
+Cache Enabled: true
+Numerical Result: 0
+Absolute Error: 1
+Relative Error: 1
+Function Evaluations: 24576
+Execution Time (sec): 0
+-----------------------------
+Method Name: Simpson Adaptive Integration
+Function Name: log(x)
+Cache Type: fast
+Cache Enabled: true
+Numerical Result: 0
+Absolute Error: 1
+Relative Error: 1
+Function Evaluations: 24576
+Execution Time (sec): 0
+-----------------------------
+Method Name: Trapezoidal Non-Adaptive Integration
+Function Name: exp(-x^2) * sin(1000x)
+Cache Type: none
+Cache Enabled: false
+Numerical Result: 0.000776673
+Absolute Error: 0.000776673
+Relative Error: 0
+Function Evaluations: 4096
+Execution Time (sec): 0.134967
+-----------------------------
+Method Name: Trapezoidal Non-Adaptive Integration
+Function Name: exp(-x^2) * sin(1000x)
+Cache Type: slow
+Cache Enabled: true
+Numerical Result: 0.000776673
+Absolute Error: 0.000776673
+Relative Error: 0
+Function Evaluations: 8192
+Execution Time (sec): 0.130662
+-----------------------------
+Method Name: Trapezoidal Non-Adaptive Integration
+Function Name: exp(-x^2) * sin(1000x)
+Cache Type: fast
+Cache Enabled: true
+Numerical Result: 0.000776673
+Absolute Error: 0.000776673
+Relative Error: 0
+Function Evaluations: 12288
+Execution Time (sec): 0.143987
+-----------------------------
+Method Name: Trapezoidal Adaptive Integration
+Function Name: exp(-x^2) * sin(1000x)
+Cache Type: none
+Cache Enabled: false
+Numerical Result: 0
+Absolute Error: 0
+Relative Error: 0
+Function Evaluations: 12288
+Execution Time (sec): 0
+-----------------------------
+Method Name: Trapezoidal Adaptive Integration
+Function Name: exp(-x^2) * sin(1000x)
+Cache Type: slow
+Cache Enabled: true
+Numerical Result: 0
+Absolute Error: 0
+Relative Error: 0
+Function Evaluations: 12288
+Execution Time (sec): 0
+-----------------------------
+Method Name: Trapezoidal Adaptive Integration
+Function Name: exp(-x^2) * sin(1000x)
+Cache Type: fast
+Cache Enabled: true
+Numerical Result: 0
+Absolute Error: 0
+Relative Error: 0
+Function Evaluations: 12288
+Execution Time (sec): 0
+-----------------------------
+Method Name: Simpson Non-Adaptive Integration
+Function Name: exp(-x^2) * sin(1000x)
+Cache Type: none
+Cache Enabled: false
+Numerical Result: 0.000776673
+Absolute Error: 0.000776673
+Relative Error: 0
+Function Evaluations: 16384
+Execution Time (sec): 0.142522
+-----------------------------
+Method Name: Simpson Non-Adaptive Integration
+Function Name: exp(-x^2) * sin(1000x)
+Cache Type: slow
+Cache Enabled: true
+Numerical Result: 0.000776673
+Absolute Error: 0.000776673
+Relative Error: 0
+Function Evaluations: 20480
+Execution Time (sec): 0.135913
+-----------------------------
+Method Name: Simpson Non-Adaptive Integration
+Function Name: exp(-x^2) * sin(1000x)
+Cache Type: fast
+Cache Enabled: true
+Numerical Result: 0.000776673
+Absolute Error: 0.000776673
+Relative Error: 0
+Function Evaluations: 24576
+Execution Time (sec): 0.155776
+-----------------------------
+Method Name: Simpson Adaptive Integration
+Function Name: exp(-x^2) * sin(1000x)
+Cache Type: none
+Cache Enabled: false
+Numerical Result: 0
+Absolute Error: 0
+Relative Error: 0
+Function Evaluations: 24576
+Execution Time (sec): 0
+-----------------------------
+Method Name: Simpson Adaptive Integration
+Function Name: exp(-x^2) * sin(1000x)
+Cache Type: slow
+Cache Enabled: true
+Numerical Result: 0
+Absolute Error: 0
+Relative Error: 0
+Function Evaluations: 24576
+Execution Time (sec): 0
+-----------------------------
+Method Name: Simpson Adaptive Integration
+Function Name: exp(-x^2) * sin(1000x)
+Cache Type: fast
+Cache Enabled: true
+Numerical Result: 0
+Absolute Error: 0
+Relative Error: 0
+Function Evaluations: 24576
+Execution Time (sec): 0
+-----------------------------
